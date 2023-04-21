@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Begin basic CRUD app",
   "arc": {
+    "aws":{"timeout":30},
     "app": "crud-app",
     "http": [
       {
@@ -15,6 +16,12 @@
         "/events/:echannel/get": {
           "method": "get",
           "src": "/todos/read"
+        }
+      },
+      {
+        "/vid2gif/:url": {
+          "method": "get",
+          "src": "/todos/vg"
         }
       }
     ],
@@ -35,6 +42,8 @@
     "@architect/functions": "^4.0.0",
     "@architect/sandbox": "^4.1.1",
     "@begin/data": "^3.0.0",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^2.6.9",
     "tiny-json-http": "^7.3.0"
   }
 }
