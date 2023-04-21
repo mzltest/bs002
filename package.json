@@ -19,7 +19,7 @@
         }
       },
       {
-        "/vid2gif/:url": {
+        "/vid2gif": {
           "method": "get",
           "src": "/todos/vg"
         }

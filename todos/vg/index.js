@@ -29,8 +29,8 @@ async function mp4link2gif(url) {
 
 exports.handler = async function http(request) {
 
-  if ('pathParameters' in request && 'url' in request.pathParameters && request.pathParameters.url != null) {
-    url = request.pathParameters.url
+  if ('queryStringParameters' in request && 'url' in request.queryStringParameters && request.queryStringParameters.url != null) {
+    url = request.queryStringParameters.url
   }
   else {
     return { statusCode: 400, json: { 'error': 'no vurl' } }
