@@ -5,6 +5,7 @@ const agent = new https.Agent({
 let fetch = require('node-fetch')
 const { promisify } = require('util');
 const exec = promisify(require('child_process').exec);
+var fs = require ("fs");
 
 async function downloadFile(url, dest) {
   const response = await fetch(url, { agent });
